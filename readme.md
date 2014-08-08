@@ -1,40 +1,12 @@
-# ParanoidAndroid #
+# ROM Based on ParanodAndroid with some slight mods. Enjoy #
 
-## Working on translations ##
+PA source: https://github.com/AOSPA
 
-We're using [Crowdin](https://crowdin.net/project/aospa-framework) to accept translations so you
-should join it if you are interested in working on translating a part of the project.
-
-## Grabbing the source ##
-
-[Repo](http://source.android.com/source/developing.html) is a tool provided by Google that
-simplifies using [Git](http://git-scm.com/book) in the context of the Android source.
-
-### Installing Repo ###
-
-```bash
-# Make a directory where Repo will be stored and add it to the path
-$ mkdir ~/bin
-$ PATH=~/bin:$PATH
-
-# Download Repo itself
-$ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-
-# Make Repo executable
-$ chmod a+x ~/bin/repo
-```
-
-### Initializing Repo ###
-
-```bash
-# Create a directory for the source files
-# This can be located anywhere (as long as the fs is case-sensitive)
-$ mkdir WORKSPACE
-$ cd WORKSPACE
+# Guide #
 
 # Install Repo in the created directory
 # Use a real name/email combination, if you intend to submit patches
-$ repo init -u https://github.com/AOSPA/manifest -b kitkat
+$ repo init -u https://github.com/AOSMP/manifest -b kitkat
 ```
 
 ### Downloading the source tree ###
@@ -58,7 +30,7 @@ a large change that spans across multiple projects.
 ```bash
 # Specify one or more projects by either name or path
 
-# For example, enter AOSPA/android_frameworks_base or
+# For example, enter AOSMP/android_frameworks_base or
 # frameworks/base to sync the frameworks/base repository
 
 $ repo sync PROJECT
@@ -90,8 +62,8 @@ You can see the status of all patches at [Gerrit Code Review](https://gerrit.par
 $ cd WORKSPACE
 
 # Create a new branch on the specific project you are going to work on
-# For example, `repo start fix-clock AOSPA/android_frameworks_base`
-$ repo start BRANCH AOSPA/PROJECT
+# For example, `repo start fix-clock AOSMP/android_frameworks_base`
+$ repo start BRANCH AOSMP/PROJECT
 
 # Go inside the project you are working on
 $ cd PROJECT
@@ -105,7 +77,7 @@ $ git commit -a
 
 # Upload your changes
 $ cd WORKSPACE
-$ repo upload AOSPA/PROJECT
+$ repo upload AOSMP/PROJECT
 ```
 
 ### Making additional changes ###
